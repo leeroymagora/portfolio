@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leeroy Magora Hydrogen Safety Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: an engineering report read as a story. One narrow text column, a left rail of
+   chapter numbers that follow the real chronology (2023 to 2027), figures that break wider. */
+:root{
+  --paper:#f4f6f7; --panel:#ffffff; --ink:#10212b; --muted:#566872; --rule:#d5dde1;
+  --flame:#0a6f8c;      /* hydrogen flame blue */
+  --flame-soft:#dcedf2;
+  --hazard:#c9730a;     /* safety amber, used only for hazard marks */
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0d171d; --panel:#15232b; --ink:#e6eef1; --muted:#9bb0ba; --rule:#2a3c46;
+    --flame:#5cc4e0; --flame-soft:#16323c; --hazard:#f0a23c; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0d171d; --panel:#15232b; --ink:#e6eef1; --muted:#9bb0ba; --rule:#2a3c46;
+  --flame:#5cc4e0; --flame-soft:#16323c; --hazard:#f0a23c; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--flame);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--flame);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+
+/* top bar */
+.bar{border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.bar nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.bar nav a{color:var(--muted);text-decoration:none;font-size:.9rem}
+.bar nav a:hover{color:var(--flame)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 250px;gap:40px;align-items:center;padding:56px 0 40px}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.04;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--flame)}
+.hero .lede{margin-top:20px;font-size:1.13rem;max-width:58ch;color:var(--ink)}
+.hero .who{margin-top:18px;color:var(--muted);max-width:60ch;font-size:.98rem}
+.hero img{border-radius:6px;aspect-ratio:1/1;object-fit:cover;width:100%;border:1px solid var(--rule)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:8px}
+.facts div{padding:16px 16px 16px 0}
+.facts div+div{padding-left:16px;border-left:1px solid var(--rule)}
+.facts b{display:block;font-family:var(--display);font-size:1.02rem;font-weight:700;line-height:1.25}
+.facts span{display:block;margin-top:4px;font-size:.86rem;color:var(--muted);line-height:1.4}
+
+/* chapters */
+.ch{display:grid;grid-template-columns:110px 1fr;gap:28px;padding:56px 0;border-bottom:1px solid var(--rule)}
+.ch .rail{position:relative}
+.ch .num{font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--flame)}
+.ch .when{margin-top:8px}
+.ch h2{font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.15;font-weight:700}
+.ch .txt{max-width:66ch}
+.ch .txt p{margin-top:14px}
+.ch h3{font-size:1.08rem;margin-top:30px;font-weight:700}
+
+figure{margin:0}
+figcaption{font-size:.84rem;color:var(--muted);margin-top:8px;line-height:1.45}
+.fig{background:var(--panel);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.fig img{width:100%}
+.grid{display:grid;gap:16px;margin-top:26px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.cover img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover}
+.tall img{aspect-ratio:3/4;object-fit:cover}
+.white{background:#fff}
+
+/* the question */
+.ask{background:var(--ink);color:var(--paper);border-radius:6px;padding:34px 30px;margin-top:8px}
+.ask p.big{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.18;text-wrap:balance}
+.ask p.small{margin-top:14px;max-width:62ch;opacity:.85}
+.ask .mono{color:var(--hazard)}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.nums div{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:14px}
+.nums b{font-family:var(--display);font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums;display:block;line-height:1.1}
+.nums span{font-size:.84rem;color:var(--muted);display:block;margin-top:6px;line-height:1.35}
+
+/* method pipeline */
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:22px;border:1px solid var(--rule);border-radius:6px;background:var(--panel);overflow:hidden}
+.pipe>div{padding:16px}
+.pipe>div+div{border-left:1px solid var(--rule)}
+.pipe .tool{font-family:var(--display);font-weight:700;font-size:1.05rem;margin-top:6px}
+.pipe p{font-size:.88rem;color:var(--muted);margin-top:6px;line-height:1.45}
+.pipe .out{background:var(--flame-soft)}
+.pipe .out p{color:var(--ink)}
+
+.svgbox{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:14px;overflow-x:auto}
+.svgbox svg{display:block;width:100%;min-width:560px;height:auto}
+svg text{font-family:var(--mono);fill:var(--ink)}
+.tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--hazard);color:var(--hazard);border-radius:3px;padding:2px 7px;margin-bottom:10px}
+
+ul.plain{margin:14px 0 0;padding-left:20px}
+ul.plain li{margin-top:6px}
+.rec{display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;margin-top:22px;list-style:none;padding:0}
+.rec li{border-top:1px solid var(--rule);padding-top:10px}
+.rec b{display:block;font-weight:600}
+.rec span{font-size:.88rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-family:var(--mono);font-size:.8rem;border:1px solid var(--rule);background:var(--panel);border-radius:3px;padding:4px 9px}
+
+footer{padding:48px 0 64px}
+footer h2{font-size:1.7rem;font-weight:800}
+footer .links{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:16px}
+footer p.note{margin-top:28px;font-size:.84rem;color:var(--muted);max-width:70ch}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:36px;gap:24px}
+  .hero img{max-width:190px;order:-1}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div{padding:14px 12px 14px 0}
+  .facts div+div{padding-left:12px}
+  .facts div:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--rule)}
+  .facts div:nth-child(4){border-top:1px solid var(--rule)}
+  .ch{grid-template-columns:1fr;gap:12px;padding:40px 0}
+  .ch .rail{display:flex;align-items:baseline;gap:14px}
+  .ch .when{margin:0}
+  .g3,.nums{grid-template-columns:1fr 1fr}
+  .pipe{grid-template-columns:1fr}
+  .pipe>div+div{border-left:0;border-top:1px solid var(--rule)}
+  .rec{grid-template-columns:1fr}
+}
+@media (max-width:420px){.g2{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span class="mono">Leeroy T. Magora · Hydrogen safety portfolio</span>
+  <nav aria-label="Sections">
+    <a href="#problem">Problem</a><a href="#stove">Hydrostove</a><a href="#question">The question</a><a href="#sfpe">SFPE 2026</a><a href="#next">Next</a><a href="#contact">Contact</a>
+  </nav>
+</div></div>
+
+<main class="wrap">
+
+<section class="hero">
+  <div>
+    <p class="mono">Fire safety engineer · Hydrogen founder · Zimbabwe / Ghent</p>
+    <h1 style="margin-top:14px">I built a hydrogen cookstove. Then I had to prove it was <em>safe to bring indoors.</em></h1>
+    <p class="lede">This page follows that path: from firewood kitchens in rural Zimbabwe, to a working hydrogen stove, to the computational hydrogen safety work I now do as a fire safety engineering student.</p>
+    <p class="who">I am Leeroy Takudzwa Magora, a mechanical engineer (BSc, Ashesi University) on the Erasmus Mundus International Master of Science in Fire Safety Engineering at Ghent University, and founder of H2ENERGIES.</p>
+  </div>
+  <img src="images/portrait.jpg" alt="Portrait of Leeroy Magora">
+</section>
+
+<div class="facts">
+  <div><b>Hydrostove 1.0</b><span>Solar PEM electrolysis cookstove, designed, simulated and fabricated</span></div>
+  <div><b>SFPE 2026</b><span>Abstract accepted, Emerging Energy Technologies Summit, Ottawa</span></div>
+  <div><b>Fluent · FDS · HyRAM</b><span>Combustion CFD, dispersion modelling and quantitative risk assessment</span></div>
+  <div><b>SFPE Foundation</b><span>Student Travel Grant awarded, August 2026</span></div>
+</div>
+
+<!-- 01 -->
+<section class="ch" id="problem">
+  <div class="rail"><div class="num">01</div><p class="mono when">2023 – 2024</p></div>
+  <div>
+    <div class="txt">
+      <h2>Where it started: cooking on firewood</h2>
+      <p>In rural Zimbabwe nearly every household cooks on wood. I grew up around these kitchens in Rusape. The smoke stays in the room, the women and children breathe it, and the trees around the village keep disappearing.</p>
+      <p>I started H2ENERGIES with my co-founder Charlton Mandaza to ask whether hydrogen made from sunlight and water could replace that fire. We ran co-design workshops with women in the community, and in 2024 we published our case for green hydrogen as a cooking fuel in Zimbabwe.</p>
+    </div>
+    <div class="grid g3">
+      <figure class="fig cover"><img src="images/smoke-kitchen.jpg" alt="A woman cooking over an open wood fire in a smoke-filled kitchen"></figure>
+      <figure class="fig cover"><img src="images/firewood.jpg" alt="A pile of cut firewood on dry ground"></figure>
+      <figure class="fig cover"><img src="images/workshop.jpg" alt="Women gathered around a stove during a community workshop"></figure>
+    </div>
+    <figcaption>A firewood kitchen in Manicaland, a day's fuel collection, and one of our community co-design workshops.</figcaption>
+    <ul class="rec">
+      <li><b>Publication</b><span>Mandaza, C. &amp; Magora, L. (2024). Green Hydrogen Production: A Potential Sustainable Solution to Zimbabwe's Cooking Fuel Shortage. SEED Journal, 2(2).</span></li>
+      <li><b>IIT Ropar &amp; Energy Mentors USA, 2024</b><span>Research internship on large-scale solar hydrogen production in water-scarce deserts. Electrolyser sizing and a MATLAB/DWSIM digital twin. Certificate of Excellence.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="ch" id="stove">
+  <div class="rail"><div class="num">02</div><p class="mono when">2024 – 2025</p></div>
+  <div>
+    <div class="txt">
+      <h2>Hydrostove 1.0: design, simulation, fabrication</h2>
+      <p>For our BSc capstone at Ashesi, Charlton and I designed and built a hydrogen cookstove. A solar-powered PEM electrolyser produces the hydrogen and the burner uses it as it is made, so there is no bulk storage in the home.</p>
+      <p>I modelled the burner in ANSYS Fluent before we cut any metal: premixed hydrogen and air, k-ε turbulence, staged primary and secondary air. We then checked the burner stand and frame in SolidWorks for thermal load and fatigue, fabricated the stove, and tested it.</p>
+    </div>
+    <div class="grid g3">
+      <figure class="fig tall white"><img src="images/cad.jpg" alt="CAD render of the Hydrostove 1.0" style="object-fit:contain"></figure>
+      <figure class="fig tall"><img src="images/fabrication.jpg" alt="Fabricating the stove frame and fitting hydrogen lines in the workshop"></figure>
+      <figure class="fig tall"><img src="images/prototype.jpg" alt="The finished Hydrostove 1.0 prototype with a pot on the burner"></figure>
+    </div>
+    <figcaption>From SolidWorks model to workshop to working prototype.</figcaption>
+
+    <h3>Combustion CFD of the burner (ANSYS Fluent)</h3>
+    <div class="grid g2">
+      <figure><div class="fig white"><img src="images/cfd-temperature.jpg" alt="CFD contour of static temperature in the combustion chamber"></div><figcaption>Static temperature. Peak near 2,170 K at the flame front, cooled downstream by secondary air.</figcaption></figure>
+      <figure><div class="fig white"><img src="images/cfd-h2.jpg" alt="CFD contour of hydrogen mass fraction"></div><figcaption>H₂ mass fraction. Hydrogen is consumed within a short distance of the injectors, with no unburnt fuel downstream.</figcaption></figure>
+      <figure><div class="fig white"><img src="images/cfd-o2.jpg" alt="CFD contour of oxygen concentration"></div><figcaption>O₂ concentration, showing the 75:25 primary and secondary air staging.</figcaption></figure>
+      <figure><div class="fig white"><img src="images/cfd-nox.jpg" alt="CFD contour of NOx concentration"></div><figcaption>NOx concentration. Thermal NOx stays far below occupational exposure limits.</figcaption></figure>
+    </div>
+
+    <div class="nums">
+      <div><b>3.5 kW</b><span>design burner power</span></div>
+      <div><b>~2,170 K</b><span>predicted peak flame temperature</span></div>
+      <div><b>10 min</b><span>to boil 1 litre of water in testing</span></div>
+      <div><b>&gt;10⁶</b><span>load cycles predicted for the burner stand</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="ch" id="question">
+  <div class="rail"><div class="num">03</div><p class="mono when">2025</p></div>
+  <div>
+    <div class="ask">
+      <p class="mono">The question every funder asked</p>
+      <p class="big" style="margin-top:10px">The stove works. But is it safe to put hydrogen inside someone's home?</p>
+      <p class="small">We won awards and the funders had money ready. Still, every conversation ended at the same place: leaks, ignition, a kitchen with no gas inspector and no trained operator. I could show them a clean flame. I could not yet show them a safety case. That gap is why I went to study fire safety engineering.</p>
+    </div>
+    <div class="grid g2">
+      <figure><div class="fig cover"><img src="images/award-fec.jpg" alt="H2ENERGIES team receiving the Innovation Challenge award at the Future of Energy Conference 2025"></div><figcaption>Innovation Challenge Winner, ACEP Future of Energy Conference, 2025.</figcaption></figure>
+      <figure><div class="fig cover white"><img src="images/award-design.jpg" alt="Distinguished Design Award certificate, Power the Community International Design Competition 2025" style="object-fit:contain"></div><figcaption>Distinguished Design Award, Power the Community International Design Competition, 2025.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="ch" id="sfpe">
+  <div class="rail"><div class="num">04</div><p class="mono when">2026</p></div>
+  <div>
+    <div class="txt">
+      <p class="mono">2026 SFPE Emerging Energy Technologies Summit · Ottawa · Poster</p>
+      <h2 style="margin-top:8px">Pre-deployment hydrogen safety assessment for a community-scale electrolytic cooking system in a semi-open rural structure</h2>
+      <p>Hydrogen safety frameworks are written for industrial sites and refuelling stations. They say little about a small electrolyser feeding a stove in a passively ventilated rural kitchen. At Ghent I put together a team with Mochammad Faiq Al-Harits and Aren Mahfouz to assess the H2ENERGIES Community Kitchen in Rusape before any hardware is installed.</p>
+      <p>The abstract was accepted to the summit's hydrogen track, and the SFPE Foundation awarded me a Student Travel Grant to present it.</p>
+    </div>
+
+    <h3>Method</h3>
+    <div class="pipe">
+      <div><span class="mono">Step 1</span><div class="tool">FMEA + HAZOP</div><p>Identify credible leak scenarios and feed leak frequencies into the risk model.</p></div>
+      <div><span class="mono">Step 2</span><div class="tool">ANSYS Fluent</div><p>Airflow through the structure's gaps and openings under Manicaland climate conditions.</p></div>
+      <div><span class="mono">Step 3</span><div class="tool">FDS</div><p>Hydrogen concentration over time for a range of leak rates and locations. Where does a flammable cloud form?</p></div>
+      <div class="out"><span class="mono">Step 4</span><div class="tool">HyRAM</div><p>Ignition probability, harm to occupants, and the leak rate at which risk stops being acceptable.</p></div>
+    </div>
+
+    <h3>The scenario we assess</h3>
+    <div class="svgbox" style="margin-top:14px">
+      <span class="tag">Schematic, not simulation output</span>
+      <svg viewBox="0 0 760 330" role="img" aria-label="Schematic cross-section of a semi-open community kitchen showing a hydrogen leak rising and collecting under the roof, with cross-ventilation through wall openings">
+        <defs>
+          <linearGradient id="pl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="var(--hazard)" stop-opacity=".55"/><stop offset="1" stop-color="var(--hazard)" stop-opacity=".12"/></linearGradient>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--flame)"/></marker>
+        </defs>
+        <!-- ground -->
+        <line x1="20" y1="290" x2="740" y2="290" stroke="var(--ink)" stroke-width="2"/>
+        <!-- accumulation layer under roof -->
+        <path d="M170 132 L380 62 L590 132 L590 150 Q380 120 170 150 Z" fill="url(#pl)"/>
+        <!-- plume -->
+        <path d="M300 236 Q292 190 318 150 Q340 120 372 96 L392 96 Q352 140 338 180 Q326 214 320 236 Z" fill="url(#pl)"/>
+        <!-- roof -->
+        <path d="M140 140 L380 58 L620 140" fill="none" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round"/>
+        <!-- walls with openings -->
+        <line x1="170" y1="132" x2="170" y2="160" stroke="var(--ink)" stroke-width="5"/>
+        <line x1="170" y1="215" x2="170" y2="290" stroke="var(--ink)" stroke-width="5"/>
+        <line x1="590" y1="132" x2="590" y2="160" stroke="var(--ink)" stroke-width="5"/>
+        <line x1="590" y1="215" x2="590" y2="290" stroke="var(--ink)" stroke-width="5"/>
+        <!-- airflow -->
+        <path d="M70 188 L160 188" stroke="var(--flame)" stroke-width="2.5" marker-end="url(#ar)" fill="none"/>
+        <path d="M185 188 Q380 200 575 188" stroke="var(--flame)" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ar)" fill="none"/>
+        <path d="M600 188 L690 188" stroke="var(--flame)" stroke-width="2.5" marker-end="url(#ar)" fill="none"/>
+        <!-- electrolyser -->
+        <rect x="205" y="232" width="62" height="58" rx="3" fill="var(--flame-soft)" stroke="var(--ink)" stroke-width="2"/>
+        <!-- pipe + leak -->
+        <path d="M267 250 L420 250 L420 262" stroke="var(--ink)" stroke-width="3" fill="none"/>
+        <circle cx="310" cy="250" r="6" fill="var(--hazard)"/>
+        <!-- stove -->
+        <rect x="396" y="262" width="60" height="28" fill="var(--panel)" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M410 258 q8 -16 16 0 q8 -16 16 0" stroke="var(--flame)" stroke-width="2.5" fill="none"/>
+        <!-- occupant -->
+        <circle cx="505" cy="212" r="10" fill="none" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M505 222 L505 262 M505 234 L485 248 M505 234 L522 250 M505 262 L493 290 M505 262 L517 290" stroke="var(--ink)" stroke-width="2" fill="none"/>
+        <!-- labels -->
+        <text x="205" y="312" font-size="11">PEM electrolyser</text>
+        <text x="396" y="312" font-size="11">burner</text>
+        <text x="322" y="246" font-size="11" style="fill:var(--hazard)">leak</text>
+        <text x="40" y="176" font-size="11">wind in</text>
+        <text x="630" y="176" font-size="11">out</text>
+        <text x="632" y="96" font-size="11">H₂ rises and</text>
+        <text x="632" y="111" font-size="11">collects under</text>
+        <text x="632" y="126" font-size="11">the roof</text>
+        <line x1="626" y1="106" x2="560" y2="126" stroke="var(--muted)" stroke-width="1"/>
+        <text x="20" y="40" font-size="11">Semi-open kitchen, passive ventilation,</text>
+        <text x="20" y="55" font-size="11">no trained operator on site</text>
+      </svg>
+    </div>
+    <figcaption>What the models have to answer: for a given leak, does ventilation through the openings clear the hydrogen, or does a flammable layer build up under the roof near an ignition source?</figcaption>
+
+    <h3>Why hydrogen needs its own safety case</h3>
+    <div class="svgbox" style="margin-top:14px">
+      <svg viewBox="0 0 760 190" role="img" aria-label="Bar chart of flammability ranges in air: hydrogen 4 to 75 percent, methane 5 to 15 percent, propane 2.1 to 9.5 percent by volume">
+        <g font-size="11">
+          <line x1="130" y1="150" x2="730" y2="150" stroke="var(--rule)"/>
+          <g fill="var(--muted)">
+            <text x="130" y="168" text-anchor="middle" style="fill:var(--muted)">0</text>
+            <text x="280" y="168" text-anchor="middle" style="fill:var(--muted)">25</text>
+            <text x="430" y="168" text-anchor="middle" style="fill:var(--muted)">50</text>
+            <text x="580" y="168" text-anchor="middle" style="fill:var(--muted)">75</text>
+            <text x="730" y="168" text-anchor="middle" style="fill:var(--muted)">100</text>
+            <text x="430" y="186" text-anchor="middle" style="fill:var(--muted)">fuel concentration in air, % by volume</text>
+          </g>
+          <g stroke="var(--rule)"><line x1="280" y1="20" x2="280" y2="150"/><line x1="430" y1="20" x2="430" y2="150"/><line x1="580" y1="20" x2="580" y2="150"/><line x1="730" y1="20" x2="730" y2="150"/></g>
+          <text x="118" y="46" text-anchor="end" font-size="12">Hydrogen</text>
+          <rect x="154" y="30" width="426" height="24" rx="3" fill="var(--hazard)"/>
+          <text x="590" y="46">4 – 75 %</text>
+          <text x="118" y="88" text-anchor="end" font-size="12">Methane</text>
+          <rect x="160" y="72" width="60" height="24" rx="3" fill="var(--flame)"/>
+          <text x="230" y="88">5 – 15 %</text>
+          <text x="118" y="130" text-anchor="end" font-size="12">Propane (LPG)</text>
+          <rect x="142.6" y="114" width="44.4" height="24" rx="3" fill="var(--flame)"/>
+          <text x="197" y="130">2.1 – 9.5 %</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Flammability range in air. Hydrogen burns across a far wider range than the cooking gases people already know, and its flame is almost invisible in daylight.</figcaption>
+
+    <h3>What the assessment gives the design team</h3>
+    <div class="txt">
+      <ul class="plain">
+        <li>The maximum electrolyser output the structure can safely take as designed.</li>
+        <li>The ventilation changes needed to bring risk down to an acceptable level.</li>
+        <li>Where equipment can and cannot sit, to keep ignition probability low in normal and fault conditions.</li>
+      </ul>
+      <p>After the first FDS runs we revised the kitchen design, adding roof-level hatches and a sprinkler system, and iterated until the risk met the ALARP criterion. The method transfers to other off-grid hydrogen cooking installations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="ch" id="next">
+  <div class="rail"><div class="num">05</div><p class="mono when">Jan – May 2027</p></div>
+  <div>
+    <div class="txt">
+      <p class="mono">MSc thesis · UPC Barcelona · January to May 2027</p>
+      <h2 style="margin-top:8px">Next: ignition probability in hydrogen QRA</h2>
+      <p>I will write my MSc thesis at UPC Barcelona, the final semester of the IMFSE programme. It compares the probabilistic ignition models used in quantitative risk assessment of hydrogen installations. I will implement the models in a common event-tree structure with the HyRAM Python libraries, using a hydrogen refuelling station as the case study, to show how much the choice of ignition model changes the final risk figure.</p>
+      <h3>Where I want to take this</h3>
+      <p>Every step so far has been about one thing: making hydrogen something people can accept near them. The cookstove taught me that acceptance depends on a safety case built on validated models. I want to spend a PhD building those models, with CFD as the method, for the safety-critical hydrogen phenomena where they are still missing.</p>
+    </div>
+    <div class="chips" aria-label="Tools">
+      <span>ANSYS Fluent</span><span>FDS</span><span>HyRAM</span><span>SolidWorks</span><span>MATLAB</span><span>Python</span><span>DWSIM</span>
+    </div>
+    <ul class="rec">
+      <li><b>Erasmus Mundus Joint Masters Scholarship</b><span>IMFSE: Ghent, Lund, UPC Barcelona. 2025 – 2027.</span></li>
+      <li><b>SFPE Foundation Student Travel Grant</b><span>2026 Emerging Energy Technologies Summit.</span></li>
+      <li><b>BSc Mechanical Engineering, Ashesi University</b><span>Mastercard Foundation Scholar. Capstone graded A. 2025.</span></li>
+      <li><b>Fellowships</b><span>beVisioneers: The Mercedes-Benz Fellowship, Resolution Project, Melton Foundation, OSUN.</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap" id="contact">
+  <h2>Contact</h2>
+  <div class="links">
+    <span>magoraleeroy@gmail.com</span>
+    <a href="https://www.h2energies.tech/">h2energies.tech</a>
+    <a href="https://youtu.be/gv0KTuI_dWQ">Hydrostove pitch video</a>
+    <a href="https://www.linkedin.com/company/h2energies">H2ENERGIES on LinkedIn</a>
+  </div>
+  <p class="note">Photographs, CAD and CFD figures are from my own project work with H2ENERGIES and the Ashesi capstone (with Charlton Mandaza). Diagrams marked as schematic illustrate the scenario and are not model results.</p>
+</footer>
+
+</body>
+</html>
