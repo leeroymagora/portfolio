@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leeroy Magora · H2ENERGIES Entrepreneurial Portfolio</title>
+<meta name="description" content="Founder &amp; CEO of H2ENERGIES, a clean-cooking venture in Zimbabwe building a solar-hydrogen cookstove. Venture, product, funding and evidence.">
+<meta property="og:title" content="Leeroy Magora · H2ENERGIES Entrepreneurial Portfolio">
+<meta property="og:description" content="From biogas to hydrogen: the venture, the Hydrostove prototype, funding raised and the evidence behind each claim.">
+<meta property="og:image" content="https://leeroymagora.github.io/portfolio/venture/images/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c211b;--muted:#5f6b5c;--rule:#e1e7de;--green:#2f8a2c;--deep:#1f6b2c;--tint:#f2f7ef;--chip:#e3f1dd;--paper:#ffffff;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--deep);text-underline-offset:3px;text-decoration-color:#a8d29b}
+a:hover{text-decoration-color:var(--deep)}
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.kicker{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--green);margin-bottom:8px}
+
+.bar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(6px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand img{width:30px;height:30px;object-fit:contain}
+.bar nav{display:flex;gap:4px 18px;flex-wrap:wrap;justify-content:flex-end}
+.bar nav a{color:var(--muted);text-decoration:none;font-size:.88rem}
+.bar nav a:hover{color:var(--deep)}
+
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center;padding:60px 0 36px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;font-weight:700}
+.hero .who{margin-top:16px;font-size:1.12rem;font-weight:600}
+.hero .role{color:var(--muted)}
+.hero .lede{margin-top:18px;font-size:1.08rem;max-width:56ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:9px 16px;border-radius:999px;border:1px solid var(--rule);text-decoration:none;font-weight:500;font-size:.92rem;color:var(--ink);background:#fff}
+.btn.primary{background:var(--deep);border-color:var(--deep);color:#fff}
+.hero .pics{display:grid;grid-template-columns:1.4fr 1fr;gap:8px;height:360px}
+.hero .pics img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 10px}
+.card{background:var(--tint);border-radius:12px;padding:16px 18px}
+.card .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.card .v{font-weight:600;font-size:1.05rem;margin-top:2px}
+.card .s{font-size:.88rem;color:#4a5547;margin-top:4px;line-height:1.45}
+
+section.ch{padding:56px 0 12px;border-top:1px solid var(--rule);margin-top:44px}
+section.ch h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:700;margin-bottom:12px}
+.lead{font-size:1.08rem;max-width:68ch;color:#2b3329}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:22px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+h3{font-size:1.05rem;font-weight:600;margin:4px 0 8px}
+ul{padding-left:20px;margin:0 0 12px} li{margin-bottom:7px}
+figure{margin:0} figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.ph{width:100%;object-fit:cover;border-radius:10px}
+
+.ev{display:inline-block;font-size:.7rem;font-weight:600;line-height:1;padding:4px 7px;border-radius:6px;background:var(--chip);color:var(--deep);text-decoration:none;margin-left:3px;vertical-align:1px}
+.ev:hover{background:var(--deep);color:#fff}
+
+.tl{position:relative;margin-top:24px}
+.tl:before{content:"";position:absolute;left:66px;top:6px;bottom:6px;width:2px;background:#cfe3c7}
+.tl .row{display:grid;grid-template-columns:58px 1fr;gap:30px;margin-bottom:18px;position:relative}
+.tl .row:before{content:"";position:absolute;left:61px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #fff}
+.tl .yr{font-weight:700;font-size:1.15rem;color:var(--deep)}
+
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th{text-align:left;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1.5px solid var(--ink);padding:8px 10px}
+td{border-bottom:1px solid var(--rule);padding:10px;vertical-align:top;font-size:.95rem}
+td.d,td.amt{white-space:nowrap;font-variant-numeric:tabular-nums}
+.spec td:first-child{color:var(--muted);width:50%} .spec td:last-child{font-weight:600}
+.code{font-weight:700;color:var(--deep);font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+
+footer{border-top:1px solid var(--rule);margin-top:56px;padding:34px 0 48px}
+footer .links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:10px}
+.note{font-size:.84rem;color:var(--muted);margin-top:16px;max-width:80ch}
+
+@media (max-width:860px){
+  .hero,.cols{grid-template-columns:1fr} .hero{padding-top:36px;gap:26px}
+  .hero .pics{height:260px} .facts,.cols3{grid-template-columns:1fr 1fr}
+  .bar nav{display:none}
+}
+@media (max-width:540px){
+  body{font-size:16px} .facts,.cols3{grid-template-columns:1fr}
+  .tl:before{left:57px} .tl .row{grid-template-columns:46px 1fr;gap:24px} .tl .row:before{left:52px} .tl .yr{font-size:1rem}
+  td,th{padding:8px 6px} td.d{white-space:normal}
+}
+@media print{ .bar{position:static} section.ch{break-inside:avoid-page} }
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#top"><img src="images/logo.png" alt="">Leeroy Magora · H2ENERGIES</a>
+  <nav aria-label="Sections">
+    <a href="#journey">Journey</a><a href="#product">Product</a><a href="#customers">Customers</a>
+    <a href="#business">Business</a><a href="#funding">Funding</a><a href="#training">Training</a><a href="#evidence">Evidence</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="top">
+
+<section class="hero">
+  <div>
+    <div class="kicker">Entrepreneurial portfolio</div>
+    <h1>Clean cooking, from biogas to hydrogen.</h1>
+    <div class="who">Leeroy Takudzwa Magora</div>
+    <div class="role">Founder &amp; CEO, H2ENERGIES · Rusape, Zimbabwe</div>
+    <p class="lede">Many rural households around Rusape cook on firewood over an open fire. H2ENERGIES started as a student
+    project to change that. It is now a registered company working on two fronts: a briquette-and-stove business that can
+    sell today, and the Hydrostove, a solar-powered cookstove that makes its own hydrogen from water.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://drive.google.com/drive/folders/1_LdoTW6JVlqrGDTH-WzFoCTigOMlCveR?usp=sharing" target="_blank" rel="noopener">All evidence (Google Drive)</a>
+      <a class="btn" href="https://youtu.be/gv0KTuI_dWQ" target="_blank" rel="noopener">Pitch video</a>
+      <a class="btn" href="https://www.h2energies.tech/" target="_blank" rel="noopener">h2energies.tech</a>
+    </div>
+  </div>
+  <div class="pics">
+    <img src="../images/fabrication.jpg" alt="Fabricating the Hydrostove frame and gas train">
+    <img src="../images/prototype.jpg" alt="Hydrostove 1.0 prototype with a pot on the burner">
+  </div>
+</section>
+
+<div class="facts">
+  <div class="card"><div class="k">Founded</div><div class="v">February 2024</div><div class="s">Roots in Bio-Anwer Initiative (biogas), 2022</div></div>
+  <div class="card"><div class="k">Incorporated <a class="ev" href="https://drive.google.com/file/d/1u_oeN5ONXbQpLAHpE7aZF0qYCXG15GR_/view?usp=sharing" target="_blank" rel="noopener" title="Certificate of Incorporation – Padiki Green Systems (Pvt) Ltd, trading as H2ENERGIES (2 Apr 2026)">A1</a></div><div class="v">2 April 2026</div><div class="s">Padiki Green Systems (Private) Limited, trading as H2ENERGIES · Reg. 95758A0242026</div></div>
+  <div class="card"><div class="k">Base</div><div class="v">Gushure Village, Rusape</div><div class="s">Manicaland Province, Zimbabwe</div></div>
+  <div class="card"><div class="k">Funding since 2025</div><div class="v">US$40,000+</div><div class="s">Non-dilutive: incubator grants, fellowship scholarship and prizes</div></div>
+  <div class="card"><div class="k">Stage</div><div class="v">Working prototype + pilot</div><div class="s">Hydrostove 1.0 built and tested; briquettes-first rollout at the Gushure Community Kitchen</div></div>
+  <div class="card"><div class="k">Team</div><div class="v">Four people</div><div class="s">Founder &amp; CEO; co-founder &amp; lead engineer (Charlton Mandaza); operations &amp; partnerships (Florence Kurewa); site operations officer</div></div>
+</div>
+
+<section class="ch" id="journey">
+  <div class="kicker">01 · Journey</div>
+  <h2>The fuel has changed three times. The problem has not.</h2>
+  <div class="tl">
+    <div class="row"><div class="yr">2022</div><div><b>Bio-Anwer Initiative.</b> Designed and fabricated a portable biogas cookstove with my team and won first place in the GBSN Africa Business Concept Challenge (US$5,000) against 78 teams<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1VctBXdXxkBfkqCWKpj83lf1wd56iRRy4/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2022 – First Place, Team Bio-Anwer Initiative">B5</a><a class="ev" href="https://drive.google.com/file/d/1HL1r60noVd_xZuyY1H3NOE1HSnrY-7gT/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2022 – Top Six Teams">B6</a>.</span> Completed the Jim Leech Mastercard Foundation Fellowship on Entrepreneurship<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1JyF4G7wammX6f0dFQPLMHz7a9ibv2HSd/view?usp=sharing" target="_blank" rel="noopener" title="Jim Leech Mastercard Foundation Fellowship on Entrepreneurship – Queen&#x27;s University (2022)">C1</a>.</span></div></div>
+    <div class="row"><div class="yr">2023</div><div><b>Second fuel.</b> Moved from biogas to bioethanol. Won the Resolution Project&#8217;s Africa Social Venture Challenge (US$5,000) and became a Resolution Fellow.</div></div>
+    <div class="row"><div class="yr">2024</div><div><b>H2ENERGIES.</b> Pivoted to green hydrogen in February and published <a href="https://journal.ashesi.edu.gh/index.php/seed/article/view/97" target="_blank" rel="noopener">a paper on hydrogen as an answer to Zimbabwe&#8217;s cooking fuel shortage</a> with Charlton Mandaza. Mapped 24 years of deforestation around Tsanzaguru with National Geographic<a class="ev" href="https://drive.google.com/file/d/1HUUY6EYpKsWs1qaWPf2uSEnXC8GaAIYT/view?usp=sharing" target="_blank" rel="noopener" title="National Geographic Society x The Nature Conservancy – Mapping Externship (Dec 2024)">C7</a> and won seed funding from NGS + TNC<a class="ev" href="https://drive.google.com/file/d/1DI2zyveGuHB9G5s7pehf8OVhJpuqdhi8/view?usp=sharing" target="_blank" rel="noopener" title="National Geographic Society + TNC – seed funding award, US$2,000 (Dec 2024)">B4</a> and the EU Youth Empowerment Fund<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1UTl5bt6qiqNlwkZFokWbgc-CbVYqGsjt/view?usp=sharing" target="_blank" rel="noopener" title="EU Youth Empowerment Fund (Global Youth Mobilization) – grant award, €4,900 (Dec 2024)">B3</a>.</span></div></div>
+    <div class="row"><div class="yr">2025</div><div><b>Prototype and incubation.</b> Built and tested Hydrostove 1.0 as our capstone and won the Distinguished Design Award (US$5,250)<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1aswzAma4CSIN0x6XshuCmJUIZXrhhw_1/view?usp=sharing" target="_blank" rel="noopener" title="Power the Community International Design Competition 2025 – Distinguished Design Award, US$5,250">B1</a>.</span> Won a US$20,000 AHCI&#178; incubator grant<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1g9cqInet8HyzZPl2v0-y7rfmga0SmYKt/view?usp=sharing" target="_blank" rel="noopener" title="AHCI² Venture Lead Contract – Hydro-Stove venture, Aug 2025 – May 2026 (first and signature pages)">A2</a>,</span> joined the beVisioneers Fellowship<span style="white-space:nowrap"><a class="ev" href="images/bevisioneers-certificate.jpg" target="_blank" rel="noopener" title="beVisioneers Fellow 2025–2026 – Foundation Year certificate">A5</a>,</span> piloted stoves with 10 households, won the ACEP Innovation Challenge<a class="ev" href="https://drive.google.com/file/d/17L0oB_8lCqKJ2BCGhnXXoONPaUpa6OXx/view?usp=sharing" target="_blank" rel="noopener" title="ACEP Future of Energy Conference 2025 – Innovation Challenge, US$2,000">B2</a> and entered the Ashesi Venture Incubator with US$10,000<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1yRrkbznlIO1Gj0bN1AB5wRg6x_USLqR3/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Venture Incubator Fellow Contract, Nov 2025 – Oct 2026 (first and signature pages)">A3</a>.</span></div></div>
+    <div class="row"><div class="yr">2026</div><div><b>Company and commercial pivot.</b> Incorporated in April<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1u_oeN5ONXbQpLAHpE7aZF0qYCXG15GR_/view?usp=sharing" target="_blank" rel="noopener" title="Certificate of Incorporation – Padiki Green Systems (Pvt) Ltd, trading as H2ENERGIES (2 Apr 2026)">A1</a>.</span> Moved to a briquettes-first business with hydrogen R&amp;D in parallel, and began building the Gushure Community Kitchen. Selected for the Mastercard Foundation FAST Idea Program (June), started the beVisioneers Advanced Program with a &#8364;3,000 project scholarship<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1n7H_tejQQaiZWpAnBwAU_u30RPc9rAT1/view?usp=sharing" target="_blank" rel="noopener" title="beVisioneers Financial Support Agreement – Advanced Program 2026–27 (cover, signatures, Annex 6.1)">A4</a>,</span> hired a site operations officer and agreed a letter of intent with HyCooker (Netherlands).</div></div>
+    <div class="row"><div class="yr">2027</div><div><b>Next.</b> FAST Idea cohort from March. Targets: 25 households by December 2026 and 1,000 by December 2027.</div></div>
+  </div>
+  <h3 style="margin-top:26px">What I want to learn next</h3>
+  <div class="cols3" style="margin-top:8px">
+    <div class="card"><div class="k">Prototype to product</div><div class="s">Take the Hydrostove from a bench prototype to a field-ready MVP that a household can buy, repair and trust.</div></div>
+    <div class="card"><div class="k">Make it locally</div><div class="s">Our stove plan switches to local manufacturing at 500 units, so product design for manufacture is the next skill to build.</div></div>
+    <div class="card"><div class="k">Fund the scale-up</div><div class="s">Grants got us this far. The next stage needs investment and a team that can scale.</div></div>
+  </div>
+</section>
+
+<section class="ch" id="product">
+  <div class="kicker">02 · Product development</div>
+  <h2>Hydrostove 1.0</h2>
+  <p class="lead">The Hydrostove makes hydrogen from water using solar power and burns it straight away, so a household never stores a tank of gas. Charlton Mandaza and I designed, built and tested the first unit as our final-year capstone at Ashesi University (grade A).</p>
+  <div class="cols3">
+    <figure><img class="ph" style="aspect-ratio:4/3;object-fit:contain;background:#f3f4f2" src="../images/cad.jpg" alt="CAD model of the Hydrostove" loading="lazy"><figcaption>CAD model of the production concept</figcaption></figure>
+    <figure><img class="ph" style="aspect-ratio:4/3;object-fit:contain;background:#f3f4f2" src="../images/cfd-temperature.jpg" alt="CFD temperature field of the hydrogen flame" loading="lazy"><figcaption>CFD temperature field of the burner flame</figcaption></figure>
+    <figure><img class="ph" style="aspect-ratio:4/3;object-position:top" src="images/prototype-lit.jpg" alt="Working prototype with the burner lit" loading="lazy"><figcaption><a href="https://drive.google.com/file/d/1KY080xLhybAIihdF9JqHAhLsNvU01oAZ/view?usp=sharing" target="_blank" rel="noopener">Working prototype</a> with the burner lit</figcaption></figure>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>Design basis and results</h3>
+      <table class="spec">
+        <tr><td>Daily hydrogen demand</td><td>0.09 kg (family of four)</td></tr>
+        <tr><td>Electrolyser</td><td>PEM, 75% efficiency, 4.44 kWh/day</td></tr>
+        <tr><td>Solar PV</td><td>About 1.24 kW</td></tr>
+        <tr><td>Hydrogen storage</td><td>None: made and burned on demand</td></tr>
+        <tr><td>Burner orifice</td><td>1.182 mm</td></tr>
+        <tr><td>Peak flame temperature (CFD)</td><td>About 2,170 K</td></tr>
+        <tr><td>Thermal efficiency (measured)</td><td>74.3%</td></tr>
+        <tr><td>Boiling test</td><td>1 L of water in 10 minutes</td></tr>
+        <tr><td>Structural test</td><td>Passed, no damage</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Recognition</h3>
+      <ul>
+        <li>Distinguished Design Award, Power the Community International Design Competition 2025: US$5,250 to the team<a class="ev" href="https://drive.google.com/file/d/1aswzAma4CSIN0x6XshuCmJUIZXrhhw_1/view?usp=sharing" target="_blank" rel="noopener" title="Power the Community International Design Competition 2025 – Distinguished Design Award, US$5,250">B1</a></li>
+        <li>Poster, Ashesi Undergraduate Research Conference, May 2025<a class="ev" href="https://drive.google.com/file/d/1PcDSDGH5Z-8XMCvtnBNTCP9z88M53Rag/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Undergraduate Research Conference 2025 – poster presentation (Hydrostove)">B9</a></li>
+        <li>Basis of the AHCI&#178;, AVI and beVisioneers applications<a class="ev" href="https://drive.google.com/file/d/1g9cqInet8HyzZPl2v0-y7rfmga0SmYKt/view?usp=sharing" target="_blank" rel="noopener" title="AHCI² Venture Lead Contract – Hydro-Stove venture, Aug 2025 – May 2026 (first and signature pages)">A2</a><a class="ev" href="https://drive.google.com/file/d/1yRrkbznlIO1Gj0bN1AB5wRg6x_USLqR3/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Venture Incubator Fellow Contract, Nov 2025 – Oct 2026 (first and signature pages)">A3</a><a class="ev" href="https://drive.google.com/file/d/1n7H_tejQQaiZWpAnBwAU_u30RPc9rAT1/view?usp=sharing" target="_blank" rel="noopener" title="beVisioneers Financial Support Agreement – Advanced Program 2026–27 (cover, signatures, Annex 6.1)">A4</a></li>
+      </ul>
+      <h3>What comes next</h3>
+      <ul>
+        <li>Add low-pressure hydrogen storage</li>
+        <li>Bring down the cost of the electrolyser</li>
+        <li>Demonstrate HyCooker&#8217;s hydrogen cooking technology at our Gushure site under the letter of intent</li>
+      </ul>
+      <h3>Other hardware I have built</h3>
+      <ul>
+        <li>Portable biogas cookstove, Bio-Anwer Initiative, 2022<a class="ev" href="https://drive.google.com/file/d/1VctBXdXxkBfkqCWKpj83lf1wd56iRRy4/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2022 – First Place, Team Bio-Anwer Initiative">B5</a></li>
+        <li><a href="https://drive.google.com/file/d/1UuFdRr5bk_NKjdLdf_ReMzhRGQMrYBAQ/view?usp=sharing" target="_blank" rel="noopener">Low-wind horizontal-axis wind turbine</a>, 2025: 38% power coefficient, wind-tunnel tested</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="customers">
+  <div class="kicker">03 · Customers and community</div>
+  <h2>Who we build for, and how we earn</h2>
+  <div class="cols" style="grid-template-columns:1.35fr 1fr">
+    <figure><img class="ph" style="height:320px" src="images/firewood-cooking.jpg" alt="A woman cooking over a firewood stove" loading="lazy"><figcaption>The baseline we replace: cooking with firewood</figcaption></figure>
+    <figure><img class="ph" style="height:320px;object-position:center 30%" src="../images/workshop.jpg" alt="Women at a co-design workshop" loading="lazy"><figcaption>Co-design workshop with women in Rusape</figcaption></figure>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>What we tested</h3>
+      <ul>
+        <li><b>Pilot, Apr&#8211;Sep 2025.</b> Under the AI for Health Co-Creation Fund we deployed stoves to 10 households to cut indoor smoke, and ran an awareness campaign that reached 100+ people. <a href="https://drive.google.com/drive/folders/1FudklR6Y1sKjrhNkXcUkNKV75egE0LoE?usp=sharing" target="_blank" rel="noopener">Pilot photos</a></li>
+        <li><b>Training.</b> Co-design workshops in rural Zimbabwe, and 100+ women trained to cook safely with clean fuels.</li>
+        <li><b>Why it matters locally.</b> Our National Geographic mapping showed how far the forest around Tsanzaguru has retreated since 2000<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1HUUY6EYpKsWs1qaWPf2uSEnXC8GaAIYT/view?usp=sharing" target="_blank" rel="noopener" title="National Geographic Society x The Nature Conservancy – Mapping Externship (Dec 2024)">C7</a>.</span></li>
+      </ul>
+      <h3>What we changed</h3>
+      <p>Hydrogen is the long-term product, but families need cleaner cooking now. In 2026 we moved to a briquettes-first model: briquettes bound with masekesa, a local plant fibre, sold with an efficient stove (46% efficient against the open-fire baseline), while Hydrostove R&amp;D continues in parallel.</p>
+    </div>
+    <div>
+      <h3>The Gushure Community Kitchen</h3>
+      <p>A women-led, earn-to-own hub on our site in Gushure Village. Members use the kitchen&#8217;s stoves to make and sell local snacks such as maputi and roasted groundnuts. Part of what they earn goes towards owning their own stove, so the kitchen pays for itself and spreads the stoves into homes.</p>
+      <table class="spec">
+        <tr><td>Briquette price</td><td>US$1 per 2 kg</td></tr>
+        <tr><td>Stove pricing</td><td>Subsidised until 500 units, then local manufacturing</td></tr>
+        <tr><td>Households, Dec 2026</td><td>25 (target)</td></tr>
+        <tr><td>Households, Dec 2027</td><td>1,000 (target)</td></tr>
+        <tr><td>Carbon finance</td><td>Partnership under negotiation for the stove rollout</td></tr>
+      </table>
+      <figure style="margin-top:14px"><img class="ph" src="images/participants.jpg" alt="Workshop participants" loading="lazy"><figcaption>Workshop participants in Rusape</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="business">
+  <div class="kicker">04 · Building the business</div>
+  <h2>Incubators, programmes and partners</h2>
+  <p class="lead">Since graduating I have run H2ENERGIES through two structured incubators, each with a signed agreement, milestones and reporting.</p>
+  <h3 style="margin-top:22px">Ashesi Health &amp; Care Initiative Incubator (AHCI&#178;) · Venture Lead<a class="ev" href="https://drive.google.com/file/d/1g9cqInet8HyzZPl2v0-y7rfmga0SmYKt/view?usp=sharing" target="_blank" rel="noopener" title="AHCI² Venture Lead Contract – Hydro-Stove venture, Aug 2025 – May 2026 (first and signature pages)">A2</a></h3>
+  <p class="muted">Aug 2025 &#8211; May 2026 · US$20,000 incubator grant (May 2025)</p>
+  <p>Ten months of market research, customer interviews, prototype testing, competition analysis, financial modelling and business-model redesign for the Hydro-Stove venture. Work produced: <a href="https://drive.google.com/file/d/1t4N2r0ilocaDYOhWmPGVTITz6A6xcol3/view?usp=sharing" target="_blank" rel="noopener">market sizing</a>, <a href="https://drive.google.com/file/d/1dVktJutf6JCf3mB7wroumpKfm0CFYzqW/view?usp=sharing" target="_blank" rel="noopener">competitor matrix</a>, <a href="https://drive.google.com/file/d/1hbY_BHWt7niu2xqW9ekj38mbQTKY3_Ig/view?usp=sharing" target="_blank" rel="noopener">financial model</a>, <a href="https://drive.google.com/file/d/1wRRKaMAcDYSnP57hd2nFQPxwXY3LuX6u/view?usp=sharing" target="_blank" rel="noopener">product-market fit analysis</a> and <a href="https://drive.google.com/file/d/1fAx3m1oBjybtCuyGqACkrkWyHVtLi3vi/view?usp=sharing" target="_blank" rel="noopener">pitch deck</a>. Pre-incubation included the Giving Voice to Values course<span style="white-space:nowrap"><a class="ev" href="https://drive.google.com/file/d/1OoDPNxdaXEFELzhICz44ZBejqoFMjQOv/view?usp=sharing" target="_blank" rel="noopener" title="Giving Voice to Values Africa – Ashesi University (Nov 2025, AHCI² pre-incubation)">C4</a>.</span></p>
+  <h3 style="margin-top:20px">Ashesi Venture Incubator, Center for Entrepreneurship · Incubatee Fellow<a class="ev" href="https://drive.google.com/file/d/1yRrkbznlIO1Gj0bN1AB5wRg6x_USLqR3/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Venture Incubator Fellow Contract, Nov 2025 – Oct 2026 (first and signature pages)">A3</a></h3>
+  <p class="muted">Nov 2025 &#8211; Oct 2026 · US$10,000 venture funding</p>
+  <p>User research, prototype validation, financial modelling and business-model refinement with coaching, peer reviews and monthly progress reports. AVI funding supports the Gushure Community Kitchen.</p>
+  <h3 style="margin-top:20px">beVisioneers: The Mercedes-Benz Fellowship<a class="ev" href="https://drive.google.com/file/d/1n7H_tejQQaiZWpAnBwAU_u30RPc9rAT1/view?usp=sharing" target="_blank" rel="noopener" title="beVisioneers Financial Support Agreement – Advanced Program 2026–27 (cover, signatures, Annex 6.1)">A4</a><a class="ev" href="images/bevisioneers-certificate.jpg" target="_blank" rel="noopener" title="beVisioneers Fellow 2025–2026 – Foundation Year certificate">A5</a><a class="ev" href="images/bevisioneers-milestone-1.jpg" target="_blank" rel="noopener" title="beVisioneers – Milestone 1 (Purpose-Driven Problem Statement) and Module 4 (Vision &amp; Innovation Strategist)">A6</a><a class="ev" href="images/bevisioneers-module-4.jpg" target="_blank" rel="noopener" title="beVisioneers – Module 4 completion badge">A7</a></h3>
+  <p class="muted">May 2025 &#8211; present · Foundation Year 2025&#8211;26; Advanced Program 2026&#8211;27 with a &#8364;3,000 project scholarship</p>
+  <p>Selected from a global cohort of 1,000+ young innovators. The Foundation Year took the Hydrostove from purpose and problem to prototype and market; the Advanced Program funds the next build.</p>
+  <h3 style="margin-top:20px">Mastercard Foundation FAST Idea Program</h3>
+  <p class="muted">Selected June 2026 · cohort begins March 2027 · run with the Anzisha Prize</p>
+  <div class="cols" style="gap:14px">
+    <div class="card"><div class="k">HyCooker, Netherlands</div><div class="s">Letter of intent (Oct 2026) to demonstrate their hydrogen cooking technology in Zimbabwe, with the Gushure Community Kitchen as the demonstration site.</div></div>
+    <div class="card"><div class="k">Carbon finance</div><div class="s">Negotiating a carbon-credit partnership in which the partner covers project development costs for the cookstove rollout in exchange for a share of credit revenue.</div></div>
+  </div>
+</section>
+
+<section class="ch" id="funding">
+  <div class="kicker">05 · Funding and competitions</div>
+  <h2>Funding, competitions and awards</h2>
+  <p class="lead">All funding to date is non-dilutive. Since graduating in 2025, H2ENERGIES has raised more than US$40,000 in incubator grants, fellowship support and prizes.</p>
+  <h3 style="margin-top:22px">Cash awards and grants</h3>
+  <div class="scroll"><table>
+    <tr><th>Date</th><th>Award</th><th>Amount</th><th>Evidence</th></tr>
+    <tr><td class='d'>May 2025</td><td>Incubator grant, Ashesi Health &amp; Care Initiative Incubator (AHCI&#178;)</td><td class='amt'>US$20,000</td><td><a class="ev" href="https://drive.google.com/file/d/1g9cqInet8HyzZPl2v0-y7rfmga0SmYKt/view?usp=sharing" target="_blank" rel="noopener" title="AHCI² Venture Lead Contract – Hydro-Stove venture, Aug 2025 – May 2026 (first and signature pages)">A2</a></td></tr><tr><td class='d'>Nov 2025</td><td>Venture funding, Ashesi Venture Incubator</td><td class='amt'>US$10,000</td><td><a class="ev" href="https://drive.google.com/file/d/1yRrkbznlIO1Gj0bN1AB5wRg6x_USLqR3/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Venture Incubator Fellow Contract, Nov 2025 – Oct 2026 (first and signature pages)">A3</a></td></tr><tr><td class='d'>Jul 2026</td><td>Project scholarship, beVisioneers Advanced Program</td><td class='amt'>&#8364;3,000</td><td><a class="ev" href="https://drive.google.com/file/d/1n7H_tejQQaiZWpAnBwAU_u30RPc9rAT1/view?usp=sharing" target="_blank" rel="noopener" title="beVisioneers Financial Support Agreement – Advanced Program 2026–27 (cover, signatures, Annex 6.1)">A4</a></td></tr><tr><td class='d'>2025</td><td>Distinguished Design Award, Power the Community International Design Competition</td><td class='amt'>US$5,250 (team)</td><td><a class="ev" href="https://drive.google.com/file/d/1aswzAma4CSIN0x6XshuCmJUIZXrhhw_1/view?usp=sharing" target="_blank" rel="noopener" title="Power the Community International Design Competition 2025 – Distinguished Design Award, US$5,250">B1</a></td></tr><tr><td class='d'>Aug 2025</td><td>Innovation Challenge, ACEP Future of Energy Conference</td><td class='amt'>US$2,000 (team)</td><td><a class="ev" href="https://drive.google.com/file/d/17L0oB_8lCqKJ2BCGhnXXoONPaUpa6OXx/view?usp=sharing" target="_blank" rel="noopener" title="ACEP Future of Energy Conference 2025 – Innovation Challenge, US$2,000">B2</a></td></tr><tr><td class='d'>Dec 2024</td><td>Grant, EU Youth Empowerment Fund (Global Youth Mobilization)</td><td class='amt'>&#8364;4,900</td><td><a class="ev" href="https://drive.google.com/file/d/1UTl5bt6qiqNlwkZFokWbgc-CbVYqGsjt/view?usp=sharing" target="_blank" rel="noopener" title="EU Youth Empowerment Fund (Global Youth Mobilization) – grant award, €4,900 (Dec 2024)">B3</a></td></tr><tr><td class='d'>Dec 2024</td><td>Seed funding, National Geographic Society + The Nature Conservancy</td><td class='amt'>US$2,000</td><td><a class="ev" href="https://drive.google.com/file/d/1DI2zyveGuHB9G5s7pehf8OVhJpuqdhi8/view?usp=sharing" target="_blank" rel="noopener" title="National Geographic Society + TNC – seed funding award, US$2,000 (Dec 2024)">B4</a></td></tr><tr><td class='d'>Dec 2024</td><td>African Young Climate Changemaker Champion, Ashoka</td><td class='amt'>US$1,000</td><td><span class=muted>on request</span></td></tr><tr><td class='d'>Nov 2023</td><td>Climate Change Champion, Global Youth Leadership Center</td><td class='amt'>US$1,000</td><td><span class=muted>on request</span></td></tr><tr><td class='d'>Jun 2023</td><td>Africa Social Venture Challenge, Resolution Project</td><td class='amt'>US$5,000</td><td><span class=muted>on request</span></td></tr><tr><td class='d'>May 2022</td><td>First place, GBSN Africa Business Concept Challenge (78 teams)</td><td class='amt'>US$5,000</td><td><a class="ev" href="https://drive.google.com/file/d/1VctBXdXxkBfkqCWKpj83lf1wd56iRRy4/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2022 – First Place, Team Bio-Anwer Initiative">B5</a></td></tr>
+  </table></div>
+  <h3 style="margin-top:26px">Selections and recognition</h3>
+  <div class="scroll"><table>
+    <tr><th>Date</th><th>Recognition</th><th>Evidence</th></tr>
+    <tr><td class='d'>Jun 2026</td><td>Selected founder, Mastercard Foundation FAST Idea Program (cohort starts March 2027)</td><td><span class=muted>selection email</span></td></tr><tr><td class='d'>May 2025</td><td>Poster presentation, Ashesi Undergraduate Research Conference</td><td><a class="ev" href="https://drive.google.com/file/d/1PcDSDGH5Z-8XMCvtnBNTCP9z88M53Rag/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Undergraduate Research Conference 2025 – poster presentation (Hydrostove)">B9</a></td></tr><tr><td class='d'>Apr 2024</td><td>Investor Expert (judge), GBSN Africa Business Concept Challenge 2024</td><td><a class="ev" href="https://drive.google.com/file/d/1QRxZyPoZZd1uyl5ZbSDw36MUjJ9x8Tq2/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2024 – Investor Expert (judge)">B7</a></td></tr><tr><td class='d'>Oct 2022</td><td>Silver medal, iGEM Grand Jamboree, Paris (Team AshesiGhana)</td><td><a class="ev" href="https://drive.google.com/file/d/1fqKEx-SFEpd6YEnfW3uIUPaP3J7P6mgd/view?usp=sharing" target="_blank" rel="noopener" title="iGEM 2022 Grand Jamboree, Paris – Silver Medal (Team AshesiGhana)">B8</a></td></tr><tr><td class='d'>Apr 2022</td><td>Top six teams, GBSN Africa Business Concept Challenge 2022</td><td><a class="ev" href="https://drive.google.com/file/d/1HL1r60noVd_xZuyY1H3NOE1HSnrY-7gT/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2022 – Top Six Teams">B6</a></td></tr>
+  </table></div>
+  <p class="note">Team awards were shared with co-founder Charlton Mandaza.</p>
+</section>
+
+<section class="ch" id="training">
+  <div class="kicker">06 · Training and business experience</div>
+  <h2>Where I learned the business side</h2>
+  <h3 style="margin-top:18px">Entrepreneurship and business training</h3>
+  <div class="scroll"><table>
+    <tr><th>Date</th><th>Programme</th><th>Topics</th><th>Evidence</th></tr>
+    <tr><td class="d">BSc</td><td>Foundations of Design &amp; Entrepreneurship I &amp; II, Ashesi University</td><td>Design and entrepreneurship core courses</td><td><span class="muted">transcript</span></td></tr>
+    <tr><td class="d">Jan&#8211;Aug 2022</td><td>Jim Leech Mastercard Foundation Fellowship on Entrepreneurship, Queen&#8217;s University</td><td>Explore, design thinking, ignite and launch modules</td><td><a class="ev" href="https://drive.google.com/file/d/1JyF4G7wammX6f0dFQPLMHz7a9ibv2HSd/view?usp=sharing" target="_blank" rel="noopener" title="Jim Leech Mastercard Foundation Fellowship on Entrepreneurship – Queen&#x27;s University (2022)">C1</a></td></tr>
+    <tr><td class="d">2022</td><td>Business Management Training, Tony Elumelu Foundation</td><td>Business management fundamentals</td><td><a class="ev" href="https://drive.google.com/file/d/1U_gUTSO8Oereue490EAhjSdPtqItFrz7/view?usp=sharing" target="_blank" rel="noopener" title="Tony Elumelu Foundation – Business Management Training (2022)">C2</a></td></tr>
+    <tr><td class="d">Feb&#8211;Aug 2022</td><td>Aspire Leaders Program, Aspire Institute</td><td>Leadership development</td><td><a class="ev" href="https://drive.google.com/file/d/153Jz6vOyh7VOab0TbG4KKeCBwrce9P7k/view?usp=sharing" target="_blank" rel="noopener" title="Aspire Leaders Program – Aspire Institute (2022)">C3</a></td></tr>
+    <tr><td class="d">2025&#8211;2026</td><td>AHCI&#178; and Ashesi Venture Incubator programmes</td><td>Market research, financial modelling, business models, pitching</td><td><a class="ev" href="https://drive.google.com/file/d/1g9cqInet8HyzZPl2v0-y7rfmga0SmYKt/view?usp=sharing" target="_blank" rel="noopener" title="AHCI² Venture Lead Contract – Hydro-Stove venture, Aug 2025 – May 2026 (first and signature pages)">A2</a><a class="ev" href="https://drive.google.com/file/d/1yRrkbznlIO1Gj0bN1AB5wRg6x_USLqR3/view?usp=sharing" target="_blank" rel="noopener" title="Ashesi Venture Incubator Fellow Contract, Nov 2025 – Oct 2026 (first and signature pages)">A3</a></td></tr>
+    <tr><td class="d">2025&#8211;2026</td><td>beVisioneers Foundation Year</td><td>Problem framing, prototyping, go-to-market</td><td><a class="ev" href="images/bevisioneers-certificate.jpg" target="_blank" rel="noopener" title="beVisioneers Fellow 2025–2026 – Foundation Year certificate">A5</a><a class="ev" href="images/bevisioneers-milestone-1.jpg" target="_blank" rel="noopener" title="beVisioneers – Milestone 1 (Purpose-Driven Problem Statement) and Module 4 (Vision &amp; Innovation Strategist)">A6</a></td></tr>
+    <tr><td class="d">Nov 2025</td><td>Giving Voice to Values Africa, Ashesi University</td><td>Values-based leadership</td><td><a class="ev" href="https://drive.google.com/file/d/1OoDPNxdaXEFELzhICz44ZBejqoFMjQOv/view?usp=sharing" target="_blank" rel="noopener" title="Giving Voice to Values Africa – Ashesi University (Nov 2025, AHCI² pre-incubation)">C4</a></td></tr>
+    <tr><td class="d">Jul 2025</td><td>Get Engaged: Student as Citizen, CEU Summer University</td><td>Civic engagement</td><td><a class="ev" href="https://drive.google.com/file/d/1YXaL01WrpLUQ9c21EVDhUrIpm1JBhSEI/view?usp=sharing" target="_blank" rel="noopener" title="Central European University – Get Engaged: Student as Citizen (Jul 2025)">C8</a></td></tr>
+  </table></div>
+  <h3 style="margin-top:26px">Consulting and investment experience</h3>
+  <div class="scroll"><table>
+    <tr><th>Date</th><th>Role</th><th>What I did</th><th>Evidence</th></tr>
+    <tr><td class="d">Nov 2024&#8211;Jan 2025</td><td>Consultant, Harvard Business School x Freezelink Ghana</td><td>With HBS MBA students, mapped Ghana&#8217;s carbon-credit rules and a plan to earn credits from cold storage</td><td><a class="ev" href="https://drive.google.com/file/d/1BMHEeujh7_DWTvfHXhDqPkhJ-f0jfiBs/view?usp=sharing" target="_blank" rel="noopener" title="Harvard Business School – 2025 MBA Immersive Field Course, Ghana: Africa Rising">C5</a></td></tr>
+    <tr><td class="d">Sep&#8211;Nov 2024</td><td>Extern, National Geographic Society x TNC</td><td>Deforestation mapping (ArcGIS, StoryMaps); proposal won US$2,000</td><td><a class="ev" href="https://drive.google.com/file/d/1HUUY6EYpKsWs1qaWPf2uSEnXC8GaAIYT/view?usp=sharing" target="_blank" rel="noopener" title="National Geographic Society x The Nature Conservancy – Mapping Externship (Dec 2024)">C7</a><a class="ev" href="https://drive.google.com/file/d/1DI2zyveGuHB9G5s7pehf8OVhJpuqdhi8/view?usp=sharing" target="_blank" rel="noopener" title="National Geographic Society + TNC – seed funding award, US$2,000 (Dec 2024)">B4</a></td></tr>
+    <tr><td class="d">May&#8211;Jun 2024</td><td>Student consultant, AGRAVIS Raiffeisen AG</td><td>Market research in Germany and Ghana; implementation and evaluation plan</td><td><a class="ev" href="https://drive.google.com/file/d/1em2DOVMEWi70KZ3qudhjV0swiR2zyT9P/view?usp=sharing" target="_blank" rel="noopener" title="German-Ghanaian Student Project on Sustainability – consultancy for AGRAVIS (2024)">C6</a></td></tr>
+    <tr><td class="d">Apr 2024</td><td>Investor Expert, GBSN Africa Business Concept Challenge</td><td>Judged early-stage African ventures</td><td><a class="ev" href="https://drive.google.com/file/d/1QRxZyPoZZd1uyl5ZbSDw36MUjJ9x8Tq2/view?usp=sharing" target="_blank" rel="noopener" title="GBSN Africa Business Concept Challenge 2024 – Investor Expert (judge)">B7</a></td></tr>
+    <tr><td class="d">Sep&#8211;Oct 2023</td><td>Venture capital intern, IgniteXL</td><td>Deal sourcing on Crunchbase; investment summaries</td><td><span class="muted">&#8212;</span></td></tr>
+  </table></div>
+</section>
+
+<section class="ch" id="evidence">
+  <div class="kicker">07 · Evidence</div>
+  <h2>Every claim, with its document</h2>
+  <p class="lead">Contracts, certificates and award letters. Each code above opens the matching document. The full set is also in <a href="https://drive.google.com/drive/folders/1_LdoTW6JVlqrGDTH-WzFoCTigOMlCveR?usp=sharing" target="_blank" rel="noopener">one Google Drive folder</a>.</p>
+  <div class="scroll"><table>
+    <tr><th style="width:70px">Code</th><th>Document</th></tr>
+    <tr><td><span class='code'>A1</span></td><td><a href="https://drive.google.com/file/d/1u_oeN5ONXbQpLAHpE7aZF0qYCXG15GR_/view?usp=sharing" target="_blank" rel="noopener">Certificate of Incorporation – Padiki Green Systems (Pvt) Ltd, trading as H2ENERGIES (2 Apr 2026)</a></td></tr><tr><td><span class='code'>A2</span></td><td><a href="https://drive.google.com/file/d/1g9cqInet8HyzZPl2v0-y7rfmga0SmYKt/view?usp=sharing" target="_blank" rel="noopener">AHCI² Venture Lead Contract – Hydro-Stove venture, Aug 2025 – May 2026 (first and signature pages)</a></td></tr><tr><td><span class='code'>A3</span></td><td><a href="https://drive.google.com/file/d/1yRrkbznlIO1Gj0bN1AB5wRg6x_USLqR3/view?usp=sharing" target="_blank" rel="noopener">Ashesi Venture Incubator Fellow Contract, Nov 2025 – Oct 2026 (first and signature pages)</a></td></tr><tr><td><span class='code'>A4</span></td><td><a href="https://drive.google.com/file/d/1n7H_tejQQaiZWpAnBwAU_u30RPc9rAT1/view?usp=sharing" target="_blank" rel="noopener">beVisioneers Financial Support Agreement – Advanced Program 2026–27 (cover, signatures, Annex 6.1)</a></td></tr><tr><td><span class='code'>A5</span></td><td><a href="images/bevisioneers-certificate.jpg" target="_blank" rel="noopener">beVisioneers Fellow 2025–2026 – Foundation Year certificate</a></td></tr><tr><td><span class='code'>A6</span></td><td><a href="images/bevisioneers-milestone-1.jpg" target="_blank" rel="noopener">beVisioneers – Milestone 1 (Purpose-Driven Problem Statement) and Module 4 (Vision &amp; Innovation Strategist)</a></td></tr><tr><td><span class='code'>A7</span></td><td><a href="images/bevisioneers-module-4.jpg" target="_blank" rel="noopener">beVisioneers – Module 4 completion badge</a></td></tr><tr><td><span class='code'>B1</span></td><td><a href="https://drive.google.com/file/d/1aswzAma4CSIN0x6XshuCmJUIZXrhhw_1/view?usp=sharing" target="_blank" rel="noopener">Power the Community International Design Competition 2025 – Distinguished Design Award, US$5,250</a></td></tr><tr><td><span class='code'>B2</span></td><td><a href="https://drive.google.com/file/d/17L0oB_8lCqKJ2BCGhnXXoONPaUpa6OXx/view?usp=sharing" target="_blank" rel="noopener">ACEP Future of Energy Conference 2025 – Innovation Challenge, US$2,000</a></td></tr><tr><td><span class='code'>B3</span></td><td><a href="https://drive.google.com/file/d/1UTl5bt6qiqNlwkZFokWbgc-CbVYqGsjt/view?usp=sharing" target="_blank" rel="noopener">EU Youth Empowerment Fund (Global Youth Mobilization) – grant award, €4,900 (Dec 2024)</a></td></tr><tr><td><span class='code'>B4</span></td><td><a href="https://drive.google.com/file/d/1DI2zyveGuHB9G5s7pehf8OVhJpuqdhi8/view?usp=sharing" target="_blank" rel="noopener">National Geographic Society + TNC – seed funding award, US$2,000 (Dec 2024)</a></td></tr><tr><td><span class='code'>B5</span></td><td><a href="https://drive.google.com/file/d/1VctBXdXxkBfkqCWKpj83lf1wd56iRRy4/view?usp=sharing" target="_blank" rel="noopener">GBSN Africa Business Concept Challenge 2022 – First Place, Team Bio-Anwer Initiative</a></td></tr><tr><td><span class='code'>B6</span></td><td><a href="https://drive.google.com/file/d/1HL1r60noVd_xZuyY1H3NOE1HSnrY-7gT/view?usp=sharing" target="_blank" rel="noopener">GBSN Africa Business Concept Challenge 2022 – Top Six Teams</a></td></tr><tr><td><span class='code'>B7</span></td><td><a href="https://drive.google.com/file/d/1QRxZyPoZZd1uyl5ZbSDw36MUjJ9x8Tq2/view?usp=sharing" target="_blank" rel="noopener">GBSN Africa Business Concept Challenge 2024 – Investor Expert (judge)</a></td></tr><tr><td><span class='code'>B8</span></td><td><a href="https://drive.google.com/file/d/1fqKEx-SFEpd6YEnfW3uIUPaP3J7P6mgd/view?usp=sharing" target="_blank" rel="noopener">iGEM 2022 Grand Jamboree, Paris – Silver Medal (Team AshesiGhana)</a></td></tr><tr><td><span class='code'>B9</span></td><td><a href="https://drive.google.com/file/d/1PcDSDGH5Z-8XMCvtnBNTCP9z88M53Rag/view?usp=sharing" target="_blank" rel="noopener">Ashesi Undergraduate Research Conference 2025 – poster presentation (Hydrostove)</a></td></tr><tr><td><span class='code'>C1</span></td><td><a href="https://drive.google.com/file/d/1JyF4G7wammX6f0dFQPLMHz7a9ibv2HSd/view?usp=sharing" target="_blank" rel="noopener">Jim Leech Mastercard Foundation Fellowship on Entrepreneurship – Queen&#x27;s University (2022)</a></td></tr><tr><td><span class='code'>C2</span></td><td><a href="https://drive.google.com/file/d/1U_gUTSO8Oereue490EAhjSdPtqItFrz7/view?usp=sharing" target="_blank" rel="noopener">Tony Elumelu Foundation – Business Management Training (2022)</a></td></tr><tr><td><span class='code'>C3</span></td><td><a href="https://drive.google.com/file/d/153Jz6vOyh7VOab0TbG4KKeCBwrce9P7k/view?usp=sharing" target="_blank" rel="noopener">Aspire Leaders Program – Aspire Institute (2022)</a></td></tr><tr><td><span class='code'>C4</span></td><td><a href="https://drive.google.com/file/d/1OoDPNxdaXEFELzhICz44ZBejqoFMjQOv/view?usp=sharing" target="_blank" rel="noopener">Giving Voice to Values Africa – Ashesi University (Nov 2025, AHCI² pre-incubation)</a></td></tr><tr><td><span class='code'>C5</span></td><td><a href="https://drive.google.com/file/d/1BMHEeujh7_DWTvfHXhDqPkhJ-f0jfiBs/view?usp=sharing" target="_blank" rel="noopener">Harvard Business School – 2025 MBA Immersive Field Course, Ghana: Africa Rising</a></td></tr><tr><td><span class='code'>C6</span></td><td><a href="https://drive.google.com/file/d/1em2DOVMEWi70KZ3qudhjV0swiR2zyT9P/view?usp=sharing" target="_blank" rel="noopener">German-Ghanaian Student Project on Sustainability – consultancy for AGRAVIS (2024)</a></td></tr><tr><td><span class='code'>C7</span></td><td><a href="https://drive.google.com/file/d/1HUUY6EYpKsWs1qaWPf2uSEnXC8GaAIYT/view?usp=sharing" target="_blank" rel="noopener">National Geographic Society x The Nature Conservancy – Mapping Externship (Dec 2024)</a></td></tr><tr><td><span class='code'>C8</span></td><td><a href="https://drive.google.com/file/d/1YXaL01WrpLUQ9c21EVDhUrIpm1JBhSEI/view?usp=sharing" target="_blank" rel="noopener">Central European University – Get Engaged: Student as Citizen (Jul 2025)</a></td></tr>
+  </table></div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <h2 style="font-size:1.3rem">Contact</h2>
+  <div class="links">
+    <span>magoraleeroy@gmail.com</span>
+    <a href="https://www.linkedin.com/in/leeroy-takudzwa-magora-02101b1b3/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.h2energies.tech/" target="_blank" rel="noopener">h2energies.tech</a>
+    <a href="https://www.linkedin.com/company/h2energies" target="_blank" rel="noopener">H2ENERGIES on LinkedIn</a>
+    <a href="https://youtu.be/gv0KTuI_dWQ" target="_blank" rel="noopener">Hydrostove pitch video</a>
+  </div>
+  <p class="note">Photographs, CAD and CFD figures are from my own project work with H2ENERGIES and the Ashesi capstone (with Charlton Mandaza). Household targets for 2026 and 2027 are plans, not results.</p>
+</footer>
+
+</body>
+</html>
